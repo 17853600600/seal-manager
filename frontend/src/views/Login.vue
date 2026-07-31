@@ -23,6 +23,10 @@
 <script>
 import axios from 'axios'
 
+const api = axios.create({
+  baseURL: 'http://localhost:5000'
+})
+
 export default {
   name: 'Login',
   data() {
@@ -43,7 +47,7 @@ export default {
       if (!valid) return
       
       try {
-        const response = await axios.post('/api/login', this.loginForm)
+        const response = await api.post('/api/login', this.loginForm)
         if (response.data.success) {
           localStorage.setItem('token', response.data.token)
           localStorage.setItem('user', JSON.stringify(response.data.user))
