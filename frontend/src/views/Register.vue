@@ -27,6 +27,7 @@
             <el-option label="部门负责人" value="department_head" />
             <el-option label="分管副总" value="vice_president" />
             <el-option label="总经理" value="president" />
+            <el-option label="文件管理员" value="file_manager" />
           </el-select>
         </el-form-item>
         <el-form-item>
